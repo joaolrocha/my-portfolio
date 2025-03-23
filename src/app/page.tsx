@@ -1,12 +1,14 @@
+import AboutMe from "@/components/aboutMe/AboutMe";
+import HeaderApp from "@/components/header/Header";
 import Image from "next/image";
 import styles from "./page.module.css";
-import HeaderApp from "@/components/header/Header";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <HeaderApp  />
+        <HeaderApp />
+        <AboutMe />
       </main>
       <footer className={styles.footer}>
         <a

@@ -1,0 +1,23 @@
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top : 6rem;
+}
+
+.logo {
+    width: 13.313rem;
+    height: 13.313rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+}
+
+.presentation {
+  color: #fff;
+  font-weight: 600;
+  font-size: 3.438rem;
+  font-family: 'Poppins', sans-serif;
+}
