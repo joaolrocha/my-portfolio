@@ -6,13 +6,13 @@
 }
 
 .logo {
-    width: 13.313rem;
-    height: 13.313rem;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 20px;
-    background-color: #f4f4f4;
+  width: 13.313rem;
+  height: 13.313rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
 }
 
 .presentation {
@@ -20,4 +20,43 @@
   font-weight: 600;
   font-size: 3.438rem;
   font-family: 'Poppins', sans-serif;
+}
+
+.resume {
+  width: 50%;
+  text-align: center;
+  color: #C5C5C5;
+  font-size: 1.125rem;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+}
+
+.buttonsGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3.375rem;
+}
+
+.contact {
+  width: 12.188rem;
+  height: 4.063rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: #fff;
+  color: black;
+  border-radius: 3.125rem;
+  border: none;
+}
+
+.downloadCv {
+  width: 12.188rem;
+  height: 4.063rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 3.125rem;
+  border: 1px solid #fff;
 }
