@@ -12,7 +12,9 @@
   font-size: 2.188rem;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
-  color: var(--primary-color);
+  background: linear-gradient(90deg, #FF8660 0%, #D5491D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .cardsContainer {

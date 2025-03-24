@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import pdf from './../../types.s';
+import profilePic from '../../assets/profile/profile.jpeg'
 import styles from './AboutMe.module.css';
 
 const resumePDF = pdf("resume.docx");
@@ -9,7 +10,7 @@ export default function AboutMe() {
     <section className={styles.aboutMe}>
       <Image
         className={styles.logo}
-        src="/next.svg"
+        src={profilePic.src}
         alt="Next.js logo"
         width={180}
         height={38}

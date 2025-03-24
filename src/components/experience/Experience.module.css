@@ -14,7 +14,9 @@
   font-size: 2.188rem;
   font-weight: 600;
   font-family: Poppins, sans-serif;
-  color: var(--primary-color);
+  background: linear-gradient(90deg, #5BADFF 0%, #1373D1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .experienceItem {

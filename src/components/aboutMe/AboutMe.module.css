@@ -13,10 +13,13 @@
   display: block;
   margin-bottom: 20px;
   background-color: #f4f4f4;
+  object-fit: cover;
 }
 
 .presentation {
-  color: #fff;
+  background: linear-gradient(90deg, #FF8660 0%, #9A33FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 600;
   font-size: 3.438rem;
   font-family: 'Poppins', sans-serif;

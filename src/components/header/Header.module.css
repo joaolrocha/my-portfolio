@@ -11,5 +11,7 @@
 .nav {
   display: flex;
   justify-content: space-between;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
   gap: 4.438rem;
 }
