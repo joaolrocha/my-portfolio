@@ -1,10 +1,18 @@
-import Demo from "./Cards/Cards";
+import CardsProject from "./Cards/Cards";
+import styles from "./Projects.module.css";
 
 export default function Projects() {
   return (
-    <section className="projects">
+    <section className={styles.projects}>
       <h2>PROJECTS</h2>
-      <Demo/>
+      <div className={styles.cardsContainer}>
+        <CardsProject />
+        <CardsProject />
+        <CardsProject />
+        <CardsProject />
+        <CardsProject />
+        <CardsProject />
+      </div>
     </section>
   )
 }
