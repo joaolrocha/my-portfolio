@@ -3,6 +3,7 @@ import HeaderApp from "@/components/header/Header";
 import Projects from "@/components/projects/Projects";
 import Image from "next/image";
 import styles from "./page.module.css";
+import Experience from "@/components/experience/Experience";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <HeaderApp />
         <AboutMe />
         <Projects />
+        <Experience />
       </main>
       <footer className={styles.footer}>
         <a
