@@ -7,11 +7,6 @@ export default function Projects() {
       <h2>PROJECTS</h2>
       <div className={styles.cardsContainer}>
         <CardsProject />
-        <CardsProject />
-        <CardsProject />
-        <CardsProject />
-        <CardsProject />
-        <CardsProject />
       </div>
     </section>
   )
