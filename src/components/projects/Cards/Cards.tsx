@@ -9,7 +9,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Project X",
+    title: "Muu AgroTech",
     description: "An innovative platform designed to streamline workflow efficiency.",
     img: img,
   },
