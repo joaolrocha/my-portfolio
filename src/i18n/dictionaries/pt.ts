@@ -1,4 +1,13 @@
 const pt = {
+  // AboutMe.tsx
+  aboutMe: {
+    title: "Desenvolvedor de Software",
+    description: "Olá, sou João Rocha. Fiz uma transição de carreira em 2020 e, desde então, venho me dedicando ao desenvolvimento de soluções web e mobile. Utilizo TypeScript, React.js, NextJs, VueJs, Angular, Node.js e NestJS para construir sistemas robustos e escaláveis. Trabalho com ferramentas como Jira Software, Bitbucket, Styled Components e SCSS para entregar soluções de alta qualidade. Se você está procurando um desenvolvedor comprometido e proativo, será um prazer conectar e explorar oportunidades de colaboração.",
+    contact: "Entre em contato",
+    downloadCv: "Download CV",
+
+  },
+  // Experience.tsx
   experience: {
     title: "EXPERIÊNCIA PROFISSIONAL",
     items: [

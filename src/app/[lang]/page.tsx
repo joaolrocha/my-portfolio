@@ -21,7 +21,7 @@ export default async function Home(props: Props) {
     <div className={styles.page}>
       <main className={styles.main}>
         <HeaderApp />
-        <AboutMe />
+        <AboutMe dict={dict.aboutMe}/>
         <Projects />
         <Experience dict={dict.experience} />
       </main>
