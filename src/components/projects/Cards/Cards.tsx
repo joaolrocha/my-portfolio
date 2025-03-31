@@ -1,53 +1,158 @@
-import { Button, Card, Image } from "@chakra-ui/react";
-import img from '../../../assets/gtecnologia/gtecnologia1.png'
+"use client";
+
+import { useState } from "react";
+import { Button, Card, Image, Stack, Text, Box } from "@chakra-ui/react";
+import img from "../../../assets/gtecnologia/gtecnologia1.png";
+import img2 from "../../../assets/gtecnologia/gtecnologia2.png";
+import img3 from "../../../assets/gtecnologia/gtecnologia3.png";
+import img4 from "../../../assets/gtecnologia/gtecnologia4.png";
+
+import imgmuu1 from "../../../assets/muuagrotech/muu1.png";
+import imgmuu2 from "../../../assets/muuagrotech/muu2.png";
+import imgmuu3 from "../../../assets/muuagrotech/muu3.png";
+import imgmuu4 from "../../../assets/muuagrotech/muumobile.jpeg";
+import imgmobile from "../../../assets/gtecnologia/gtecnologiamobile.png";
+
 const projects = [
   {
     id: 1,
     title: "Genesis Tecnologia",
-    description: "A cutting-edge technology project focused on innovation and performance.",
-    img: img,
+    description:
+      "Genesis Tecnologia",
+    images: [img.src, img2.src, img3.src, img4.src, imgmobile.src],
   },
   {
     id: 2,
     title: "Muu AgroTech",
-    description: "An innovative platform designed to streamline workflow efficiency.",
-    img: img,
-  },
-  {
-    id: 3,
-    title: "NextGen App",
-    description: "A modern mobile-first application built with Next.js and Chakra UI.",
-    img: img,
-  },
-  {
-    id: 4,
-    title: "EcoVision",
-    description: "A sustainability-focused initiative promoting green energy solutions.",
-    img: img,
-  },
-  {
-    id: 5,
-    title: "Skyline AI",
-    description: "A deep-learning model trained to analyze city skylines in real-time.",
-    img: img,
+    description:
+      "Muu Agrotech",
+    images: [imgmuu1.src, imgmuu2.src, imgmuu3.src, imgmuu4.src],
   },
 ];
 
 const CardsProject = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const openModal = (project: typeof projects[0]) => {
+    setSelectedProject(project);
+    setImageIndex(0);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+    setIsOpen(false);
+  };
+
+  const nextImage = () => {
+    if (!selectedProject) return;
+    setImageIndex((prev) => (prev + 1) % selectedProject.images.length);
+  };
+
+  const prevImage = () => {
+    if (!selectedProject) return;
+    setImageIndex((prev) =>
+      prev === 0 ? selectedProject.images.length - 1 : prev - 1
+    );
+  };
+
   return (
     <>
-      {projects.map((project) => (
-        <Card.Root key={project.id} maxW="sm" overflow="hidden">
-          <Image src={project.img.src} alt={project.title} />
-          <Card.Body gap="2">
-            <Card.Title>{project.title}</Card.Title>
-            <Card.Description>{project.description}</Card.Description>
-          </Card.Body>
-          <Card.Footer gap="2">
-            <Button variant="solid">See more</Button>
-          </Card.Footer>
-        </Card.Root>
-      ))}
+      <Stack direction="row" flexWrap="wrap" gap={6} justify="center">
+        {projects.map((project) => (
+          <Card.Root key={project.id} maxW="sm" overflow="hidden" p={4}>
+            <Image src={project.images[0]} alt={project.title} borderRadius="md" height={250} />
+            <Text fontWeight="bold" mt={3}>
+              {project.title}
+            </Text>
+            <Text fontSize="sm" color="gray.600">
+              {project.description}
+            </Text>
+            <Button mt={4} onClick={() => openModal(project)} colorScheme="blue">
+              See more
+            </Button>
+          </Card.Root>
+        ))}
+      </Stack>
+
+      {isOpen && selectedProject && (
+        <Box
+          position="fixed"
+          top={0}
+          left={0}
+          w="100vw"
+          h="100vh"
+          bg="blackAlpha.700"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          zIndex={999}
+        >
+          <Box
+            bg="white"
+            borderRadius="lg"
+            maxW="600px"
+            w="90%"
+            p={6}
+            textAlign="center"
+            position="relative"
+          >
+            <Button
+              position="absolute"
+              top={2}
+              right={2}
+              size="sm"
+              onClick={closeModal}
+            >
+              ✕
+            </Button>
+
+            {/* Carrossel */}
+            <Box position="relative">
+              <Image
+                src={selectedProject.images[imageIndex]}
+                alt={selectedProject.title}
+                borderRadius="md"
+                maxH="300px"
+                mx="auto"
+                objectFit="cover"
+              />
+              {selectedProject.images.length > 1 && (
+                <>
+                  <Button
+                    position="absolute"
+                    top="50%"
+                    left={0}
+                    transform="translateY(-50%)"
+                    onClick={prevImage}
+                    size="sm"
+                    variant="ghost"
+                  >
+                    ◀
+                  </Button>
+                  <Button
+                    position="absolute"
+                    top="50%"
+                    right={0}
+                    transform="translateY(-50%)"
+                    onClick={nextImage}
+                    size="sm"
+                    variant="ghost"
+                  >
+                    ▶
+                  </Button>
+                </>
+              )}
+            </Box>
+
+            <Text mt={4} fontSize="md" color={"black"}>
+              {selectedProject.description}
+            </Text>
+          </Box>
+        </Box>
+      )}
     </>
   );
 };
