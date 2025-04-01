@@ -1,8 +1,9 @@
+import "../globals.css";
 import { Provider } from "@/components/ui/provider";
 import { Locale } from "@/i18n/get-dictionary";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
-import "../globals.css";
+import ChakraRootProvider from "@/components/ui/ChakraRootProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,11 +36,18 @@ export default async function RootLayout({
   const { lang } = await params;
 
   return (
-    <html lang={lang}>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable}`}>
-        <Provider>
-          {children}
-        </Provider>
+    <html
+      lang={lang}
+      className="dark"
+      style={{ colorScheme: "dark" }} // ✅ garante estilo fixo no SSR
+      suppressHydrationWarning        // ✅ evita warnings residuais
+    >
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable}`}
+      >
+        <ChakraRootProvider>
+          <Provider>{children}</Provider>
+        </ChakraRootProvider>
       </body>
     </html>
   );

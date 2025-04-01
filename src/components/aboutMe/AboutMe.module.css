@@ -78,3 +78,51 @@
   color: #000;
   transform: scale(1.03);
 }
+
+@media (max-width: 767px) {
+  .aboutMe {
+    padding-top: 4rem;
+  }
+
+  .logo {
+    width: 9rem;
+    height: 9rem;
+    margin-bottom: 1rem;
+  }
+
+  .presentation {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .resume {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .buttonsGroup {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact,
+  .downloadCv {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logo {
+    width: 11rem;
+    height: 11rem;
+  }
+
+  .presentation {
+    font-size: 2.8rem;
+  }
+
+  .resume {
+    width: 70%;
+    font-size: 1.05rem;
+  }
+}
