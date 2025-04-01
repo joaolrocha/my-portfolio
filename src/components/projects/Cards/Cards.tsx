@@ -67,9 +67,9 @@ const CardsProject = () => {
             <Text fontWeight="bold" mt={3}>
               {project.title}
             </Text>
-            <Text fontSize="sm" color="gray.600">
+            {/* <Text fontSize="sm" color="gray.600">
               {project.description}
-            </Text>
+            </Text> */}
             <Button mt={4} onClick={() => openModal(project)} colorScheme="blue">
               See more
             </Button>
@@ -93,7 +93,7 @@ const CardsProject = () => {
           <Box
             bg="white"
             borderRadius="lg"
-            maxW="600px"
+            maxW="800px"
             w="90%"
             p={6}
             textAlign="center"
@@ -115,7 +115,7 @@ const CardsProject = () => {
                 src={selectedProject.images[imageIndex]}
                 alt={selectedProject.title}
                 borderRadius="md"
-                maxH="300px"
+                maxH="500px"
                 mx="auto"
                 objectFit="cover"
               />

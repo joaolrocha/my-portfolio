@@ -15,7 +15,7 @@ type ExperienceProps = {
 
 export default function Experience({ dict }: ExperienceProps) {
   return (
-    <section className={styles.experience}>
+    <section id='experience' className={styles.experience}>
       <h2 className={styles.tittle}>{dict.title}</h2>
 
       {dict.items.map((exp, index) => (

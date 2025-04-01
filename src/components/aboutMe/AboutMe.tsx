@@ -16,7 +16,7 @@ const resumePDF = pdf("resume.docx");
 
 export default function AboutMe({ dict }: AboutMeProps) {
   return (
-    <section className={styles.aboutMe}>
+    <section id='about' className={styles.aboutMe}>
       <Image
         className={styles.logo}
         src={profilePic.src}
@@ -34,7 +34,7 @@ export default function AboutMe({ dict }: AboutMeProps) {
       </p>
 
       <div className={styles.buttonsGroup}>
-        <button className={styles.contact}>{dict.contact}</button>
+        <button className={styles.contact}><a href="#contact">{dict.contact}</a></button>
         <a href={resumePDF}>
           <button className={styles.downloadCv}>{dict.downloadCv}</button>
         </a>
