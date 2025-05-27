@@ -1,3 +1,4 @@
+import { Text } from '@chakra-ui/react';
 import styles from './Experience.module.css'
 
 type ExperienceItem = {
@@ -25,7 +26,7 @@ export default function Experience({ dict }: ExperienceProps) {
             <p>{exp.period}</p>
           </div>
           <div className={styles.experienceItemContent}>
-            <p>{exp.description}</p>
+            <Text className={styles.experienceItemContent} color={{ base: "black", _dark: "#8491A0" }}>{exp.description}</Text>
           </div>
         </div>
       ))}

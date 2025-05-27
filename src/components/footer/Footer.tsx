@@ -4,10 +4,13 @@ import { MdEmail } from "react-icons/md";
 
 
 import styles from './Footer.module.css';
+import { Box } from "@chakra-ui/react";
 
 export default function Footer() {
+
   return (
-    <section id="contact" className={styles.footer} >
+    <Box id="contact" width={'100%'} bg={{ base: "#e2e2e2", _dark: "#191919" }} >
+      <div className={styles.footer}>
       <h1>Contact</h1>
 
       <div className={styles.contact}>
@@ -52,6 +55,7 @@ export default function Footer() {
           <FaGithub />
         </a>
       </div>
-    </section>
+      </div>
+    </Box>
   )
 }
