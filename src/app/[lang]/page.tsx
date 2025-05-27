@@ -8,10 +8,11 @@ import Projects from "@/components/projects/Projects";
 import styles from "../page.module.css";
 
 type Props = {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 };
+
 
 export default async function Home(props: Props) {
   const { lang } = await props.params; 
@@ -22,7 +23,7 @@ export default async function Home(props: Props) {
       <main className={styles.main}>
         <HeaderApp />
         <AboutMe dict={dict.aboutMe}/>
-        <Projects />
+        <Projects dict={dict.projects}/>
         <Experience dict={dict.experience} />
       </main>
       <footer className={styles.footer}>

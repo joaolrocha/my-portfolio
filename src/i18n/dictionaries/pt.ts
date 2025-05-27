@@ -7,6 +7,11 @@ const pt = {
     downloadCv: "Download CV",
 
   },
+
+    projects: {
+    title: "PROJETOS",
+    button: "Detalhes"
+  },
   // Experience.tsx
   experience: {
     title: "EXPERIÊNCIA PROFISSIONAL",

@@ -27,7 +27,6 @@ export default function HeaderApp() {
           border="1px solid #ccc"
           borderRadius="full"
           p="2px"
-          spacing={0}
         >
           <Button
             onClick={() => router.push(`/en`)}

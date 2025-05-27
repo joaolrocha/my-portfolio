@@ -13,6 +13,13 @@ import imgmuu3 from "../../../assets/muuagrotech/muu3.png";
 import imgmuu4 from "../../../assets/muuagrotech/muumobile.jpeg";
 import imgmobile from "../../../assets/gtecnologia/gtecnologiamobile.png";
 
+type ProjectsProps = {
+  dict: {
+    title: string;
+    button: string;
+  };
+}
+
 const projects = [
   {
     id: 1,
@@ -30,7 +37,7 @@ const projects = [
   },
 ];
 
-const CardsProject = () => {
+const CardsProject = ({dict}: ProjectsProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const [imageIndex, setImageIndex] = useState(0);
@@ -71,7 +78,7 @@ const CardsProject = () => {
               {project.description}
             </Text> */}
             <Button mt={4} onClick={() => openModal(project)} colorScheme="blue">
-              See more
+              {dict.button}
             </Button>
           </Card.Root>
         ))}
