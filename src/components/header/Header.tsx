@@ -1,6 +1,6 @@
 "use client";
 
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { MdMenu, MdClose } from "react-icons/md"
 import {
   Box,
   Button,
@@ -58,7 +58,7 @@ export default function HeaderApp() {
               variant="ghost"
               onClick={onToggle}
             >
-              {open ? <CloseIcon /> : <HamburgerIcon />}
+              {open ? <MdClose /> : <MdMenu />}
             </IconButton>
 
             <AnimatePresence>
