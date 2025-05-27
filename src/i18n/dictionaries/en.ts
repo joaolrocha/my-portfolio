@@ -2,7 +2,7 @@ const en = {
   // AboutMe.tsx
   aboutMe: {
     title: "Software Developer",
-    description: "Hello, Im João Rocha. I made a career transition in 2020, and since then, I&apos;ve been dedicated to developing web and mobile solutions. I use TypeScript, React.js, NextJs, VueJs, Angular, Node.js, and NestJS to build robust and scalable systems. I work with tools like Jira Software, Bitbucket, Styled Components, and SCSS to deliver high-quality solutions. If you&apos;re looking for a committed and proactive developer, it would be a pleasure to connect and explore collaboration opportunities.",
+    description: "Hello, Im João Rocha. I made a career transition in 2020, and since then, I ve been dedicated to developing web and mobile solutions. I use TypeScript, React.js, NextJs, VueJs, Angular, Node.js, and NestJS to build robust and scalable systems. I work with tools like Jira Software, Bitbucket, Styled Components, and SCSS to deliver high-quality solutions. If you are looking for a committed and proactive developer, it would be a pleasure to connect and explore collaboration opportunities.",
     contact: "Get In Touch",
     downloadCv: "Download CV",
 
