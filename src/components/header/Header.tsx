@@ -14,6 +14,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Header.module.css";
+import { ColorModeButton } from "../ui/color-mode";
 
 export default function HeaderApp() {
   const { open, onToggle, onClose } = useDisclosure();
@@ -46,7 +47,7 @@ export default function HeaderApp() {
   );
 
   return (
-    <header className={styles.header}>
+    <HStack className={styles.header} bg={{ base: "#e2e2e2", _dark: "#191919" }}>
       <Box className={styles.nav} display="flex" alignItems="center" justifyContent="space-between" width="100%">
         <Box fontWeight="bold" fontSize="xl">LOGO</Box>
 
@@ -83,6 +84,7 @@ export default function HeaderApp() {
                     <Link href={`/${currentLocale}#experience`} onClick={onClose}>Experience</Link>
                     <Link href={`/${currentLocale}#contact`} onClick={onClose}>Contact</Link>
                     <LanguageToggle />
+                    <ColorModeButton />
                   </VStack>
                 </motion.div>
               )}
@@ -95,9 +97,10 @@ export default function HeaderApp() {
             <Link href={`/${currentLocale}#experience`}>Experience</Link>
             <Link href={`/${currentLocale}#contact`}>Contact</Link>
             <LanguageToggle />
+            <ColorModeButton />
           </HStack>
         )}
       </Box>
-    </header>
+    </HStack>
   );
 }
