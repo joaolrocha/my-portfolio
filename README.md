@@ -64,3 +64,13 @@ JoaoLuiz
 
 - LinkedIn: [João Rocha](https://www.linkedin.com/in/rochajoao/)
 - Email: joaolrocha07@gmail.com
+
+## Imagens
+
+![mobile1](./public/mobile1.png)
+![mobile2](./public/mobile2.png)
+![mobile3](./public/mobile3.png)
+
+![desk1](./public/desk1.png)
+![desk2](./public/desk2.png)
+![desk3](./public/desk3.png)
