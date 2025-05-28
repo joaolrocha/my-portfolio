@@ -6,6 +6,15 @@
   padding: 1rem;
 }
 
+.tittle {
+  font-size: 2.188rem;
+  font-weight: 600;
+  font-family: Poppins, sans-serif;
+  background: linear-gradient(to right, #4FD1C5, #805AD5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;

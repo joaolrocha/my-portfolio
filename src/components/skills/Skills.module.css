@@ -1,0 +1,16 @@
+.tittle {
+  margin-bottom: 1.688rem;
+  font-size: 2.188rem;
+  font-weight: 600;
+  font-family: Poppins, sans-serif;
+  background: linear-gradient(
+    90deg,
+    #9f7aea 0%,
+    #a855f7 25%,
+    #7c3aed 50%,
+    #6b21a8 75%,
+    #9333ea 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
