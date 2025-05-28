@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧑‍💻 Joao Luiz — Portfolio
 
-## Getting Started
+> Portfólio pessoal de desenvolvedor front-end criado com foco em design responsivo, transições suaves e organização de projetos reais.
 
-First, run the development server:
+🔗 Acesse em: https://my-portfolio-theta-six-31.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Tecnologias Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js 15
+- React 19
+- TypeScript
+- Chakra UI
+- Framer Motion (animações suaves)
+- React Icons (ícones das stacks)
+- Custom Hooks e Components
+- CSS Modules
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧩 Funcionalidades
 
-To learn more about Next.js, take a look at the following resources:
+- 🌗 Modo Claro/Escuro com persistência
+- 📱 Totalmente Responsivo (mobile-first)
+- 🧠 Seção de Skills com ícones animados
+- 🖼️ Galeria de Projetos com Modal + Carrossel
+- 🌐 Suporte a múltiplos idiomas (pt/en)
+- 🎨 Header com animações e menu colapsável
+- ⚙️ Deploy via Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📷 Destaques Visuais
 
-## Deploy on Vercel
+JoaoLuiz  
+<Software Developer/>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Visual moderno e minimalista
+- Mobile-first de verdade
+- Scroll suave e navegação fluida
+- Projetos reais exibidos com carrossel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 💡 Ideias Futuras
+
+- Integração com GitHub API (linguagens, contribuições)
+- Página de blog ou artigos técnicos
+- Testes automatizados com Playwright
+- CI/CD com GitHub Actions
+
+---
+
+## 📁 Rodando o projeto localmente
+
+1. Clone o repositório
+2. Instale as dependências
+3. Rode o projeto com `npm run dev`
+
+---
+
+## 📬 Contato
+
+- LinkedIn: [João Rocha](https://www.linkedin.com/in/rochajoao/)
+- Email: joaolrocha07@gmail.com
+
+## Imagens
+
+![mobile1](./public/mobile1.png)
+![mobile2](./public/mobile2.png)
+![mobile3](./public/mobile3.png)
+
+![desk1](./public/desk1.png)
+![desk2](./public/desk2.png)
+![desk3](./public/desk3.png)
