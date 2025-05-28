@@ -85,19 +85,19 @@ const CardsProject = ({dict}: ProjectsProps) => {
       </Stack>
 
      {isOpen && selectedProject && (
-  <Box
-    position="fixed"
-    top={0}
-    left={0}
-    w="100vw"
-    h="100vh"
-    bg="blackAlpha.700"
-    display="flex"
-    alignItems="center"
-    justifyContent="center"
-    zIndex={999}
-    px={4} // padding horizontal extra para evitar bordas coladas
-  >
+      <Box
+        position="fixed"
+        top={0}
+        left={0}
+        w="100vw"
+        h="100vh"
+        bg="blackAlpha.700"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        zIndex={999}
+        px={4} // padding horizontal extra para evitar bordas coladas
+      >
     <Box
       bg="white"
       borderRadius="lg"
@@ -123,7 +123,7 @@ const CardsProject = ({dict}: ProjectsProps) => {
       </Button>
 
       {/* Carrossel */}
-      <Box position="relative" mt={6}>
+      <Box >
         <Image
           src={selectedProject.images[imageIndex]}
           alt={selectedProject.title}
@@ -143,9 +143,6 @@ const CardsProject = ({dict}: ProjectsProps) => {
               transform="translateY(-50%)"
               onClick={prevImage}
               size="sm"
-              variant="ghost"
-              bg="whiteAlpha.800"
-              _hover={{ bg: "whiteAlpha.900" }}
             >
               ◀
             </Button>
@@ -156,9 +153,6 @@ const CardsProject = ({dict}: ProjectsProps) => {
               transform="translateY(-50%)"
               onClick={nextImage}
               size="sm"
-              variant="ghost"
-              bg="whiteAlpha.800"
-              _hover={{ bg: "whiteAlpha.900" }}
             >
               ▶
             </Button>
