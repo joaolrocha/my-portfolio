@@ -123,7 +123,7 @@ const CardsProject = ({dict}: ProjectsProps) => {
       </Button>
 
       {/* Carrossel */}
-      <Box position="relative" mt={6}>
+      <Box >
         <Image
           src={selectedProject.images[imageIndex]}
           alt={selectedProject.title}
@@ -143,9 +143,6 @@ const CardsProject = ({dict}: ProjectsProps) => {
               transform="translateY(-50%)"
               onClick={prevImage}
               size="sm"
-              variant="ghost"
-              bg="whiteAlpha.800"
-              _hover={{ bg: "whiteAlpha.900" }}
             >
               ◀
             </Button>
@@ -156,9 +153,6 @@ const CardsProject = ({dict}: ProjectsProps) => {
               transform="translateY(-50%)"
               onClick={nextImage}
               size="sm"
-              variant="ghost"
-              bg="whiteAlpha.800"
-              _hover={{ bg: "whiteAlpha.900" }}
             >
               ▶
             </Button>
