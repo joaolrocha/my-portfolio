@@ -3,7 +3,6 @@
 import {
   Box,
   Grid,
-  Heading,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -20,6 +19,7 @@ import {
   SiReact,
 } from "react-icons/si";
 import { useColorModeValue } from "@/components/ui/color-mode";
+import styles from "./Skills.module.css";
 
 const skills = [
   { label: "Javascript", icon: <SiJavascript size={40} /> },
@@ -38,19 +38,10 @@ export default function Skills() {
   const cardBg = useColorModeValue("white", "gray.800");
   const hoverBg = useColorModeValue("black", "white");
   const hoverColor = useColorModeValue("white", "gray.800");
-  const textColor = useColorModeValue("gray.800", "white");
 
   return (
     <Box textAlign="center" py={{ base: 6, md: 10 }} px={{ base: 4, md: 10 }}>
-      <Heading
-        as="h2"
-        fontSize={{ base: "2xl", md: "3xl" }}
-        fontWeight="bold"
-        mb={8}
-        color={textColor}
-      >
-        MY <Box as="span" fontWeight="extrabold">SKILLS</Box>
-      </Heading>
+      <h2 className={styles.tittle}>My Skills</h2>
 
       <Grid
         templateColumns={{
