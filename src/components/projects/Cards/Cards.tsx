@@ -84,82 +84,95 @@ const CardsProject = ({dict}: ProjectsProps) => {
         ))}
       </Stack>
 
-      {isOpen && selectedProject && (
-        <Box
-          position="fixed"
-          top={0}
-          left={0}
-          w="100vw"
-          h="100vh"
-          bg="blackAlpha.700"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          zIndex={999}
-        >
-          <Box
-            bg="white"
-            borderRadius="lg"
-            maxW="800px"
-            w="90%"
-            p={6}
-            textAlign="center"
-            position="relative"
-          >
+     {isOpen && selectedProject && (
+  <Box
+    position="fixed"
+    top={0}
+    left={0}
+    w="100vw"
+    h="100vh"
+    bg="blackAlpha.700"
+    display="flex"
+    alignItems="center"
+    justifyContent="center"
+    zIndex={999}
+    px={4} // padding horizontal extra para evitar bordas coladas
+  >
+    <Box
+      bg="white"
+      borderRadius="lg"
+      w="100%"
+      maxW="800px"
+      maxH="90vh"
+      overflowY="auto"
+      p={4}
+      textAlign="center"
+      position="relative"
+      display="flex"
+      flexDirection="column"
+    >
+      <Button
+        position="absolute"
+        top={2}
+        right={2}
+        size="sm"
+        zIndex={1}
+        onClick={closeModal}
+      >
+        ✕
+      </Button>
+
+      {/* Carrossel */}
+      <Box position="relative" mt={6}>
+        <Image
+          src={selectedProject.images[imageIndex]}
+          alt={selectedProject.title}
+          borderRadius="md"
+          maxH={{ base: "60vh", md: "500px" }}
+          mx="auto"
+          objectFit="contain"
+          w="100%"
+        />
+
+        {selectedProject.images.length > 1 && (
+          <>
             <Button
               position="absolute"
-              top={2}
-              right={2}
+              top="50%"
+              left={2}
+              transform="translateY(-50%)"
+              onClick={prevImage}
               size="sm"
-              onClick={closeModal}
+              variant="ghost"
+              bg="whiteAlpha.800"
+              _hover={{ bg: "whiteAlpha.900" }}
             >
-              ✕
+              ◀
             </Button>
+            <Button
+              position="absolute"
+              top="50%"
+              right={2}
+              transform="translateY(-50%)"
+              onClick={nextImage}
+              size="sm"
+              variant="ghost"
+              bg="whiteAlpha.800"
+              _hover={{ bg: "whiteAlpha.900" }}
+            >
+              ▶
+            </Button>
+          </>
+        )}
+      </Box>
 
-            {/* Carrossel */}
-            <Box position="relative">
-              <Image
-                src={selectedProject.images[imageIndex]}
-                alt={selectedProject.title}
-                borderRadius="md"
-                maxH="500px"
-                mx="auto"
-                objectFit="cover"
-              />
-              {selectedProject.images.length > 1 && (
-                <>
-                  <Button
-                    position="absolute"
-                    top="50%"
-                    left={0}
-                    transform="translateY(-50%)"
-                    onClick={prevImage}
-                    size="sm"
-                    variant="ghost"
-                  >
-                    ◀
-                  </Button>
-                  <Button
-                    position="absolute"
-                    top="50%"
-                    right={0}
-                    transform="translateY(-50%)"
-                    onClick={nextImage}
-                    size="sm"
-                    variant="ghost"
-                  >
-                    ▶
-                  </Button>
-                </>
-              )}
-            </Box>
+      <Text mt={4} fontSize="md" color="black">
+        {selectedProject.description}
+      </Text>
+    </Box>
+  </Box>
+)}
 
-            <Text mt={4} fontSize="md" color={"black"}>
-              {selectedProject.description}
-            </Text>
-          </Box>
-        </Box>
-      )}
     </>
   );
 };
