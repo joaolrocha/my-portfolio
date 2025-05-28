@@ -24,7 +24,7 @@ export default function HeaderApp() {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   const LanguageToggle = () => (
-    <HStack border="1px solid #ccc" borderRadius="full" p="2px" mt={4} gap="2">
+    <HStack border="1px solid #ccc" borderRadius="full" p="2px" gap="2">
       <Button
         onClick={() => router.push(`/en`)}
         size="sm"
@@ -49,8 +49,7 @@ export default function HeaderApp() {
   return (
     <HStack className={styles.header} bg={{ base: "#e2e2e2", _dark: "#191919" }}>
       <Box className={styles.nav} display="flex" alignItems="center" justifyContent="space-between" width="100%">
-        <Box fontWeight="bold" fontSize="xl">LOGO</Box>
-
+        <h2 className={styles.tittle}>&lt;JoaoLuiz/&gt;</h2>
         {isMobile ? (
           <>
             <IconButton
