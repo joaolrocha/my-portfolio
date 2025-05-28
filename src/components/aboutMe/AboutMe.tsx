@@ -2,7 +2,7 @@ import Image from 'next/image';
 import profilePic from '../../assets/profile/profile.jpeg';
 import pdf from './../../types.s';
 import styles from './AboutMe.module.css';
-import { Text } from '@chakra-ui/react';
+import { Button, Text } from '@chakra-ui/react';
 
 type AboutMeProps = {
   dict: {
@@ -35,9 +35,9 @@ export default function AboutMe({ dict }: AboutMeProps) {
       </Text>
 
       <div className={styles.buttonsGroup}>
-        <button className={styles.contact}><a href="#contact">{dict.contact}</a></button>
+        <Button colorPalette="teal" className={styles.contact}><a href="#contact">{dict.contact}</a></Button>
         <a href={resumePDF}>
-          <button className={styles.downloadCv}>{dict.downloadCv}</button>
+          <Button colorPalette="teal" variant="outline" className={styles.downloadCv}>{dict.downloadCv}</Button>
         </a>
       </div>
     </section>

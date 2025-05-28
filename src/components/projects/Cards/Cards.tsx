@@ -85,19 +85,19 @@ const CardsProject = ({dict}: ProjectsProps) => {
       </Stack>
 
      {isOpen && selectedProject && (
-  <Box
-    position="fixed"
-    top={0}
-    left={0}
-    w="100vw"
-    h="100vh"
-    bg="blackAlpha.700"
-    display="flex"
-    alignItems="center"
-    justifyContent="center"
-    zIndex={999}
-    px={4} // padding horizontal extra para evitar bordas coladas
-  >
+      <Box
+        position="fixed"
+        top={0}
+        left={0}
+        w="100vw"
+        h="100vh"
+        bg="blackAlpha.700"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        zIndex={999}
+        px={4} // padding horizontal extra para evitar bordas coladas
+      >
     <Box
       bg="white"
       borderRadius="lg"

@@ -46,18 +46,18 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
-  background-color: #fff;
-  color: black;
+  /* background-color: #fff; */
+  /* color: black; */
   border-radius: 3.125rem;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.contact:hover {
+/* .contact:hover {
   background-color: #e6e6e6;
   transform: scale(1.03);
-}
+} */
 
 .downloadCv {
   width: 12.188rem;
@@ -65,19 +65,10 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
-  background-color: transparent;
-  /* color: #fff; */
   border-radius: 3.125rem;
-  border: 1px solid #fff;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-.downloadCv:hover {
-  background-color: #fff;
-  color: #000;
-  transform: scale(1.03);
-}
 
 @media (max-width: 767px) {
   .aboutMe {

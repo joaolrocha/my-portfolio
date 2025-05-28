@@ -16,13 +16,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Header.module.css";
 import { ColorModeButton } from "../ui/color-mode";
 
+
 export default function HeaderApp() {
   const { open, onToggle, onClose } = useDisclosure();
   const pathname = usePathname();
   const router = useRouter();
   const currentLocale = pathname.split("/")[1] || "en";
   const isMobile = useBreakpointValue({ base: true, md: false });
-
   const LanguageToggle = () => (
     <HStack border="1px solid #ccc" borderRadius="full" p="2px" gap="2">
       <Button
@@ -72,7 +72,7 @@ export default function HeaderApp() {
                     top: "4rem",
                     left: 0,
                     width: "100%",
-                    backgroundColor: "#222",
+                    backgroundColor: "#191919",
                     zIndex: 20,
                     padding: "2rem 1rem",
                   }}
@@ -83,7 +83,7 @@ export default function HeaderApp() {
                     <Link href={`/${currentLocale}#experience`} onClick={onClose}>Experience</Link>
                     <Link href={`/${currentLocale}#contact`} onClick={onClose}>Contact</Link>
                     <LanguageToggle />
-                    <ColorModeButton />
+                    <ColorModeButton bg={{ base: "#e2e2e2", _dark: "#191919" }}/>
                   </VStack>
                 </motion.div>
               )}
