@@ -1,20 +1,90 @@
-export default function Skills () {
+"use client";
+
+import {
+  Box,
+  Grid,
+  Heading,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiGit,
+  SiSass,
+  SiNestjs,
+  SiNextdotjs,
+  SiVuedotjs,
+  SiSocketdotio,
+  SiAngular,
+  SiReact,
+} from "react-icons/si";
+import { useColorModeValue } from "@/components/ui/color-mode";
+
+const skills = [
+  { label: "Javascript", icon: <SiJavascript size={40} /> },
+  { label: "TypeScript", icon: <SiTypescript size={40} /> },
+  { label: "Git", icon: <SiGit size={40} /> },
+  { label: "Sass/Scss", icon: <SiSass size={40} /> },
+  { label: "Nest.js", icon: <SiNestjs size={40} /> },
+  { label: "Next.js", icon: <SiNextdotjs size={40} /> },
+  { label: "Vue", icon: <SiVuedotjs size={40} /> },
+  { label: "Socket.io", icon: <SiSocketdotio size={40} /> },
+  { label: "Angular", icon: <SiAngular size={40} /> },
+  { label: "ReactJS", icon: <SiReact size={40} /> },
+];
+
+export default function Skills() {
+  const cardBg = useColorModeValue("white", "gray.800");
+  const hoverBg = useColorModeValue("black", "white");
+  const hoverColor = useColorModeValue("white", "gray.800");
+  const textColor = useColorModeValue("gray.800", "white");
+
   return (
-    <section className="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>React.js</li>
-        <li>Next.js</li>
-        <li>Vue.js</li>
-        <li>Angular</li>
-        <li>Node.js</li>
-        <li>NestJS</li>
-        <li>TypeScript</li>
-        <li>SCSS</li>
-        <li>Styled Components</li>
-        <li>Jira Software</li>
-        <li>Bitbucket</li>
-      </ul>
-    </section>
-  )
+    <Box textAlign="center" py={{ base: 6, md: 10 }} px={{ base: 4, md: 10 }}>
+      <Heading
+        as="h2"
+        fontSize={{ base: "2xl", md: "3xl" }}
+        fontWeight="bold"
+        mb={8}
+        color={textColor}
+      >
+        MY <Box as="span" fontWeight="extrabold">SKILLS</Box>
+      </Heading>
+
+      <Grid
+        templateColumns={{
+          base: "repeat(2, 1fr)",
+          sm: "repeat(2, 1fr)",
+          md: "repeat(5, 1fr)",
+          lg: "repeat(5, 1fr)",
+        }}
+        gap={6}
+        justifyItems="center"
+      >
+        {skills.map((skill, index) => (
+          <Box
+            key={index}
+            p={{ base: 4, md: 6 }}
+            w="100%"
+            maxW="140px"
+            minH="130px"
+            borderWidth={1}
+            borderRadius="md"
+            textAlign="center"
+            bg={cardBg}
+            transition="all 0.3s ease"
+            _hover={{ bg: hoverBg, color: hoverColor }}
+          >
+            <VStack>
+              {skill.icon}
+              <Text fontWeight="bold" fontSize="sm">
+                {skill.label}
+              </Text>
+            </VStack>
+          </Box>
+        ))}
+      </Grid>
+    </Box>
+  );
 }

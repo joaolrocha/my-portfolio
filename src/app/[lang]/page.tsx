@@ -6,6 +6,7 @@ import Footer from "@/components/footer/Footer";
 import HeaderApp from "@/components/header/Header";
 import Projects from "@/components/projects/Projects";
 import styles from "../page.module.css";
+import Skills from "@/components/skills/Skills";
 
 type Props = {
   params: Promise<{
@@ -23,6 +24,7 @@ export default async function Home(props: Props) {
       <main className={styles.main}>
         <HeaderApp />
         <AboutMe dict={dict.aboutMe}/>
+        <Skills/>
         <Projects dict={dict.projects}/>
         <Experience dict={dict.experience} />
       </main>
