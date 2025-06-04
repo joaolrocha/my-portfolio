@@ -14,19 +14,19 @@ export default function Footer() {
       <h1>Contact</h1>
 
       <div className={styles.contact}>
-        <a href="tel:+351912345678">
+        <a>
           <FaPhoneAlt /> +55 82 99307-6113
         </a>
 
-        <a href="tel:+351912345678">
+        <a>
           <FaWhatsapp /> +55 82 99307-6113
         </a>
 
-        <a href="tel:+351912345678">
+        <a>
           <MdEmail /> joaolrocha07@gmail.com
         </a>
 
-        <a href="tel:+351912345678">
+        <a>
           <FaMapMarkerAlt /> Brazil, Alagoas, Maceió
         </a>
       </div>
