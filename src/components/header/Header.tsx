@@ -1,20 +1,20 @@
 "use client";
 
-import { MdMenu, MdClose } from "react-icons/md"
 import {
   Box,
   Button,
   HStack,
   IconButton,
   VStack,
-  useDisclosure,
   useBreakpointValue,
+  useDisclosure,
 } from "@chakra-ui/react";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import styles from "./Header.module.css";
+import { MdClose, MdMenu } from "react-icons/md";
 import { ColorModeButton } from "../ui/color-mode";
+import styles from "./Header.module.css";
 
 
 export default function HeaderApp() {
@@ -61,32 +61,31 @@ export default function HeaderApp() {
             </IconButton>
 
             <AnimatePresence>
-              {open && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                  style={{
-                    position: "absolute",
-                    top: "4rem",
-                    left: 0,
-                    width: "100%",
-                    backgroundColor: "#191919",
-                    zIndex: 20,
-                    padding: "2rem 1rem",
-                  }}
-                >
-                  <VStack align="start" gap="4" color="white">
-                    <Link href={`/${currentLocale}`} onClick={onClose}>Home</Link>
-                    <Link href={`/${currentLocale}#about`} onClick={onClose}>About</Link>
-                    <Link href={`/${currentLocale}#experience`} onClick={onClose}>Experience</Link>
-                    <Link href={`/${currentLocale}#contact`} onClick={onClose}>Contact</Link>
-                    <LanguageToggle />
-                    <ColorModeButton bg={{ base: "#e2e2e2", _dark: "#191919" }}/>
-                  </VStack>
-                </motion.div>
-              )}
+              <>
+                {open && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={open ? { height: "auto", opacity: 1 } : {}}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    style={{
+                      overflow: "hidden",
+                      width: "100%",
+                      backgroundColor: "#191919",
+                    }}
+                  >
+                    <VStack align="center" gap="4" color="white">
+                      <Link href={`/${currentLocale}`} onClick={onClose}>Home</Link>
+                      <Link href={`/${currentLocale}#about`} onClick={onClose}>About</Link>
+                      <Link href={`/${currentLocale}#experience`} onClick={onClose}>Experience</Link>
+                      <Link href={`/${currentLocale}#contact`} onClick={onClose}>Contact</Link>
+                      <LanguageToggle />
+                      <ColorModeButton bg={{ base: "#e2e2e2", _dark: "#191919" }} />
+                    </VStack>
+                  </motion.div>
+
+                )}
+              </>
             </AnimatePresence>
           </>
         ) : (

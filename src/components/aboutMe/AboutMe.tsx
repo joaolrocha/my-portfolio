@@ -1,8 +1,12 @@
+"use client"
+
 import Image from 'next/image';
 import profilePic from '../../assets/profile/profile.jpeg';
 import pdf from './../../types.s';
 import styles from './AboutMe.module.css';
 import { Button, Text } from '@chakra-ui/react';
+import { useParams } from 'next/navigation';
+
 
 type AboutMeProps = {
   dict: {
@@ -13,9 +17,10 @@ type AboutMeProps = {
   };
 }
 
-const resumePDF = pdf("resume.docx");
-
 export default function AboutMe({ dict }: AboutMeProps) {
+  const params = useParams();
+  const lang = params.lang || 'en';
+  const resumePDF = (lang === 'en') ? pdf("resume.pdf") : pdf("curriculo.pdf");
   return (
     <section id='about' className={styles.aboutMe}>
       <Image
