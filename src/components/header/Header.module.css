@@ -20,5 +20,15 @@
   justify-content: space-between;
   font-family: Poppins, sans-serif;
   font-weight: 600;
-  gap: 4.438rem;
+  /* gap: 4.438rem; */
+  /* scroll-behavior: smooth; */
+}
+
+@media (max-width: 767px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
 }
